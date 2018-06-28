@@ -1,14 +1,53 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="barcol">
+    <ion-title text-center>
+     CoffeeApp
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding text-center>
+  
+        <ion-input text-center type="text" [(ngModel)]="name" placeholder="Name"></ion-input>
+        <br>
+        <h4 text-center>TOPPINGS</h4>
+        <div class="input1">
+          <br>
+          <input type="checkbox" [(ngModel)]="WCream"> Whipped Cream <br><br>
+          <input style="margin-right: 35px" type="checkbox" [(ngModel)]="Chocolate"> Chocolate <br>
+        </div>
+        <br>
+        <h4 text-center>QUANTITY</h4>
+        <div class="input2">
+          <br>
+          <button (click)="adjust('-')">-</button>
+          {{quantity}}
+          <button (click)="adjust('+')">+</button>
+        </div>
+        <br>
+        <h4 text-center>Order Summary</h4>
+        <p *ngIf="order == true">
+          Name:{{name}} <br>
+         <a *ngIf="WCream == true">
+            {{WC}} 
+            <br>
+         </a>
+         <a *ngIf="Chocolate == true">
+            {{C}}
+            <br>
+         </a>
+          Quantity:{{quantity}} <br>
+          Total:R{{price}} <br>
+          Thank you
+        </p>
+        
+        <br><br>
+        <div class="Order">
+          <button (click)="Order()">ORDER</button>
+          <br><br>
+          <button style="margin-right: 5px" (click)="reset()">RESET</button>
+        </div>
+        
+          
+        
 </ion-content>

@@ -1,3 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 page-home {
+   ion-input{
+       border: none;
+       border-bottom: 2px solid #D35400;
+   }
+   h4{
+       color: #D35400;
+   }
+   .input2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 15pt;
+   }
+   .input2 button{
+       font-size: 15pt;
+       padding: 0.5em 1em;
+       border-radius: 5px;
+   }
+   .Order{
+    font-family: 'Roboto Slab', serif;
+    font-size: 15pt;
 
+   }
+   .Order button{
+    font-weight: bold;
+    padding: 1em 1em;
+    border-radius: 5px;
+    width: 40%;
+   }
+   ion-footer{
+       border: none;
+   }
+   ion-footer button{
+    padding: 1em 1em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+   }
+   a{
+       color: black
+   }
 }
