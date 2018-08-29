@@ -25,7 +25,9 @@ export class HomePage {
     if(this.name == null || this.quantity == 0){
       let alert = this.alrtCntrl.create(
        {title:'Incomplete',
-      message:'Please fill your name and quantiy'}
+      message:'Please fill your name and quantiy',
+      buttons:['Ok']
+    }
       )
       alert.present();
     }else{
